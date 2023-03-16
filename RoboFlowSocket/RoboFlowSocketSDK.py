@@ -216,3 +216,25 @@ class RoboFlowSocket(object):
         back_msg = self.sock.recv(1024)
         print(back_msg.decode())
 
+    def set_init_gripper(self):
+        '''夹爪初始化'''
+        message = "set_init_gripper(CAG-1)"
+        self.sock.sendall(message.encode())
+        back_msg = self.sock.recv(1024)
+        print(back_msg.decode())
+    
+    def set_open_gripper(self):
+        '''开启夹爪'''
+        message = "set_open_gripper(CAG-1)"
+        self.sock.sendall(message.encode())
+        back_msg = self.sock.recv(1024)
+        print(back_msg.decode())
+
+    def set_close_gripper(self):
+        '''关闭夹爪'''
+        message = "set_close_gripper(CAG-1)"
+        self.sock.sendall(message.encode())
+        back_msg = self.sock.recv(1024)
+        print(back_msg.decode())
+    
+
