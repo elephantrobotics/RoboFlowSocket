@@ -31,7 +31,7 @@ pip show RoboFlowSocket
 
 您可以在`RoboFlowSocket/README.md` 中找到RoboFlowSocket 提供了哪些接口。
 
-请转到[此处](https://https://github.com/elephantrobotics/RoboFlowSocket/tree/main/RoboFlowSocket/README.md)。
+请转到[此处](https://github.com/elephantrobotics/RoboFlowSocket/tree/main/RoboFlowSocket/README.md)。
 
 # **API Interface Description**
 
@@ -41,5 +41,5 @@ Elephant Robotics allow users to remotely control the robot using Socket. We use
 
 You can find out which interfaces RoboFlowSocket provides in `RoboFlowSocket/README.md`.
 
-Please go to [here](https://https://github.com/elephantrobotics/RoboFlowSocket/tree/main/RoboFlowSocket/README.md).
+Please go to [here](https://github.com/elephantrobotics/RoboFlowSocket/tree/main/RoboFlowSocket/README.md).
 
