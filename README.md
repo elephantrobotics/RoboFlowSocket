@@ -1,9 +1,9 @@
 # RoboFlowSocket
 
-[![](https://img.shields.io/pypi/pyversions/RoboFlowSocket)](https://img.shields.io/pypi/pyversions/RoboFlowSocket)[![](https://img.shields.io/pypi/v/RoboFlowSocket)](https://pypi.org/project/RoboFlowSocket/)[![](https://img.shields.io/github/license/elephantrobotics/RoboFlowSocket)](https://img.shields.io/github/license/elephantrobotics/RoboFlowSocket)
+[![](https://img.shields.io/pypi/pyversions/RoboFlowSocket)](https://img.shields.io/pypi/pyversions/RoboFlowSocket) [![](https://img.shields.io/pypi/v/RoboFlowSocket)](https://pypi.org/project/RoboFlowSocket/) [![](https://img.shields.io/github/license/elephantrobotics/RoboFlowSocket)](https://img.shields.io/github/license/elephantrobotics/RoboFlowSocket)
 
 ## Introduction
-RoboFlowSocket用于控制mycobot pro 600，连接机械臂服务器进行TCP/IP通讯。
+RoboFlowSocket用于控制mycobot pro 600，连接机械臂服务器进行TCP/IP通讯。   
 RoboFlowSocket is used to control mycobot pro 600 and connect the robotic arm server for TCP/IP communication.
 [![](https://docs.elephantrobotics.com/docs/gitbook-en/resourse/2-serialproduct/Pro600.jpg)](https://www.elephantrobotics.com/en/mycobot-600-en/)
 
