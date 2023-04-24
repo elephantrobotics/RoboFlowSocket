@@ -6,7 +6,7 @@ import socket
 import time
 
 class RoboFlowSocket(object):
-    def __init__(self,address = "192.168.1.159",port = 5001):
+    def __init__(self,address,port):
         '''初始化，连接机械臂'''
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server_address = (address, port)  # 机械臂服务器的IP地址和端口

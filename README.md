@@ -3,7 +3,7 @@
 [![](https://img.shields.io/pypi/pyversions/RoboFlowSocket)](https://img.shields.io/pypi/pyversions/RoboFlowSocket) [![](https://img.shields.io/pypi/v/RoboFlowSocket)](https://pypi.org/project/RoboFlowSocket/) [![](https://img.shields.io/github/license/elephantrobotics/RoboFlowSocket)](https://img.shields.io/github/license/elephantrobotics/RoboFlowSocket)
 
 ## Introduction
-RoboFlowSocket用于控制mycobot pro 600，连接机械臂服务器进行TCP/IP通讯。   
+RoboFlowSocket用于控制mycobot pro 600，连接机械臂服务器进行TCP/IP通讯。 
 RoboFlowSocket is used to control mycobot pro 600 and connect the robotic arm server for TCP/IP communication.
 [![](https://docs.elephantrobotics.com/docs/gitbook-en/resourse/2-serialproduct/Pro600.jpg)](https://www.elephantrobotics.com/en/mycobot-600-en/)
 
@@ -40,39 +40,29 @@ You can find out which interfaces RoboFlowSocket provides in `RoboFlowSocket/REA
 from RoboFlowSocket import RoboFlowSocket
 
 # 连接机械臂服务端IP地址的端口
-erobot = RoboFlowSocket()
-
-# 开机和上电机器人
-erobot.power_on()
-erobot.state_on()
+erobot = RoboFlowSocket(address="192.168.10.161",port=5001)
 
 # 获取机械臂关节信息
 cur_angles = erobot.get_angles()
 print(cur_angles)
-
-# 控制关节一走90°
-angles = [90.0, -90.0, 0.0, -90.0, 0.0, 0.0]
-erobot.set_angles(angles, 500)
-
+# 获取机械臂末端信息
 cur_coords = erobot.get_coords()
 print(cur_coords)
-
-get_speed = erobot.get_speed()
-print(get_speed)
-
-check = erobot.check_running()
-print(check)
 ```
 
 ![2](docs/Images/2.png)
 
+![5](docs/Images/5.gif) 
+
 # Notice
 
-用Python调用API接口控制机械臂的时候，**server_address**要改为树莓派的IP地址，并且保证PC和树莓派在同一局域网内（即IP地址**xxx.xxx.xxx.yyy**,前三位数字一样），就可以通过Socket通信。
+用Python调用API接口控制机械臂的时候，**address**要改为树莓派的IP地址，并且保证PC和树莓派在**同一网段**内，就可以通过Socket通信。
 
-When using Python to control the robotic arm, the **server_address** should be changed to the IP address of the Raspberry Pi, and ensure that the PC and the Raspberry Pi are in the same LAN (the IP address **xxx.xxx.xxx.yyy**, the first three digits are the same ), you can communicate through Socket.
+When using Python to call the API interface to control the robotic arm, the **address** should be changed to the IP address of the Raspberry Pi, and ensure that the PC and the Raspberry Pi are in **the same network segment**, then they can communicate through the Socket.
 
 ![3](docs/Images/3.png)
+
+![6](docs/Images/6.png)
 
 确保在运行前，**关节没有超过限位**，否则机械臂操作失败，关节限位请看[这里](https://github.com/elephantrobotics/RoboFlowSocket/blob/main/RoboFlowSocket/README.md#set_angles)
 
