@@ -9,7 +9,7 @@ Import to your project:
 ```python
 from RoboFlowSocket import RoboFlowSocket
 
-erobot = RoboFlowSocket()
+erobot = RoboFlowSocket(address="192.168.10.161",port=5001)
 
 cur_angles = erobot.get_angles()
 print(cur_angles)
